@@ -11,41 +11,9 @@ pub enum State {
 /// Key Identifier
 #[derive(Eq, PartialEq, Hash, Clone, Debug)]
 pub enum KeyId {
-    Escape,
-    Return,
-    Backspace,
-    Left,
-    Right,
-    Up,
-    Down,
-    Space,
-    A,
-    B,
-    C,
-    D,
-    E,
-    F,
-    G,
-    H,
-    I,
-    J,
-    K,
-    L,
-    M,
-    N,
-    O,
-    P,
-    Q,
-    R,
-    S,
-    T,
-    U,
-    V,
-    W,
-    X,
-    Y,
-    Z,
-    F1,
+    Esc, // 0x01
+
+    F1, // 0x3b
     F2,
     F3,
     F4,
@@ -55,10 +23,11 @@ pub enum KeyId {
     F8,
     F9,
     F10,
-    F11,
+    F11, // 0x57
     F12,
-    Zero,
-    One,
+
+    Backtick, // 0x29
+    One, // 0x02
     Two,
     Three,
     Four,
@@ -67,27 +36,85 @@ pub enum KeyId {
     Seven,
     Eight,
     Nine,
-    Shift,
-    LeftCtrl,
-    RightCtrl,
-    LeftAlt,
-    RightAlt,
-    CapsLock,
-    Pause,
-    PageUp,
-    PageDown,
-    PrintScreen,
-    Insert,
-    End,
-    Home,
-    Delete,
-    Add,
-    Subtract,
-    Multiply,
-    Separator,
-    Decimal,
-    Divide,
-    BackTick
+    Zero,
+    Minus,
+    Equals,
+    Yen, // 0x7d
+    Backspace, // 0x0e
+
+    Tab, // 0x0f
+    Q,
+    W,
+    E,
+    R,
+    T,
+    Y,
+    U,
+    I,
+    O,
+    P,
+    LeftBracket,
+    RightBracket,
+    Enter,
+
+    CapsLock, // 0x3a
+    A, // 0x1e
+    S,
+    D,
+    F,
+    G,
+    H,
+    J,
+    K,
+    L,
+    Semicolon,
+    Quote,
+    Backslash, // 0x2b
+
+    LeftShift, // 0x2a
+    Z, // 0x2c
+    X,
+    C,
+    V,
+    B,
+    N,
+    M,
+    Comma,
+    Period,
+    Slash,
+    SpecialNearShift, // 0x73
+    RightShift, // 0x36
+
+    LeftCtrl, // 0x1d
+    LeftWin, // 0x5b
+    LeftAlt, // 0x38
+    Muhenkan, // 0x7b
+    Space, // 0x39
+    Henkan, // 0x79
+    HiraganaKatakana, // 0x70
+    RightAlt, // (0xe0) 0x38
+    RightWin, // 0x5c
+    Menu, // 0x5d
+    RightCtrl, // (0xe0) 0x1d
+
+    PrintScreen, // special
+    ScrollLock, // special
+    Pause, // special
+
+    Insert, // 0x52
+    Delete, // 0x53
+    Home, // 0x47
+    End, // 0x4f
+    PageUp, // 0x49
+    PageDown, // 0x51
+
+    Up, // 0x48
+    Down, // 0x50
+    Left, // 0x4b
+    Right, // 0x4d
+
+    // TODO numpad
+    NumLock, // 0x45
 }
 
 /// Mouse Buttons
